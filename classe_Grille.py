@@ -23,6 +23,8 @@ class Grille :
             Entrée : rang de la colonne (int), numéro du joueur (int)
             Sortie : booléen (bool)"""
         ligne = NB_LIGNES - 1 # dernière ligne de la grille
+        if 0 <= colonne <= NB_COLONNES - 1 : # sécurité
+            return False
         while ligne != -1 and self.grille[ligne][colonne] != 0 :
             ligne = ligne - 1
         if ligne != -1 :
