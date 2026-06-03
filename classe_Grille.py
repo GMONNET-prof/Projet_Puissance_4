@@ -11,11 +11,14 @@ class Grille :
             un attribut : grille (tableau de 6 lignes et 7 colonnes)
             Entrée : aucune
             Sortie : aucune"""
-        for i in range(NB_LIGNES) :
-            ligne = []
-            for j in range(NB_COLONNES) :
-                ligne.append(0)
-            self.grille.append(ligne)
+        if grille != [] :
+            self.grille = grille
+        else :
+            for i in range(NB_LIGNES) :
+                ligne = []
+                for j in range(NB_COLONNES) :
+                    ligne.append(0)
+                self.grille.append(ligne)
 
     def jouer(self, colonne, joueur) :
         """ Place le pion dans la colonne si le coup est possible
