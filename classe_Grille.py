@@ -6,12 +6,11 @@ NB_PIONS_ALIGNES = 4
 # la classe
 class Grille :
     """simule un jeu de puissance 4 avec une grille  de 6 lignes et 7 colonnes"""
-    def __init__(self) :
+    def __init__(self, grille = []) :
         """ Constructeur de la classe Grille
             un attribut : grille (tableau de 6 lignes et 7 colonnes)
             Entrée : aucune
             Sortie : aucune"""
-        self.grille = []
         for i in range(NB_LIGNES) :
             ligne = []
             for j in range(NB_COLONNES) :
