@@ -46,6 +46,14 @@ class Grille :
             chaine_finale += "\n" + "|"
         return chaine_finale[:-1]
 
+    def valeur_case(ligne, colonne) :
+        """ Retourne le nombre d'alignements de quatre cases contenant la case en entrée
+        Entrée : coordonnées d'une case de la grille (int, int)
+        Sortie : nombre d'alignements (int)"""
+    score = 0
+    # ici les appels aux fonctions qui calculent le nombre d'alignements (verticalement, horizontalement, diagonalement 1 et 2)
+    return score
+
     def score(self):
         """ Retourne le score actuel de la grille pour le joueur 2
             Entrée : aucune
