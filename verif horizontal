@@ -1,0 +1,14 @@
+def horizonal_verification(self, player):
+    for row in self.grid:
+        for i, val in enumerate(row):
+            hasWon = True
+             if val == player and i <= len(row)-NB_PIONS:
+                #print(f"la valeur parcourue est {val} ({row})")
+                for span in range(NB_PIONS):
+                    #print(f"l'écart calculé est {span}, ce qui equivaut à {row[i+span]}")
+                    if row[i+span] != player:
+                        hasWon = False
+                print(hasWon)
+                if hasWon: return hasWon
+            hasWon = False
+    return hasWon
