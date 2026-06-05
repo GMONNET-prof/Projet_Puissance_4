@@ -10,8 +10,8 @@ def est_pleine(self):
     Entrer :  
     Sortie : booleen (bool) """
     
-    for laliste in self.grille:
-        for j in laliste:
-            if j == 0:
+    for ligne in self.grille:
+        for une_case in ligne:
+            if une_case == 0:
                 return False
     return True
