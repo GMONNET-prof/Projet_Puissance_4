@@ -58,7 +58,7 @@ class Grille :
     
     
     
-    def verif_diagonal1(self,joueur):
+    def verif_diagonal1(self,joueur): # ici la fonction à récupérer
         """Vérifie les diagonales de haut-gauche vers bas-droite"""
         for x in range(NB_LIGNES):
             for y in range(NB_COLONNES):
