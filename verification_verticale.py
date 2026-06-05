@@ -1,4 +1,4 @@
-def verif_vertical(grille, joueur):
+def verif_vertical(self,grille, joueur):
 
     i = NB_PIONS_ALIGNES - 1
 
