@@ -1,3 +1,4 @@
+from random import*
 # Les variables globales
 NB_LIGNES = 6
 NB_COLONNES = 7
@@ -145,14 +146,39 @@ class Grille :
     def a_gagner(self, joueur):
         if self.verif_vertical(joueur):
             return True
-        if self.verif_horizontal(joueur):
+        if self.horizonal_verification(joueur):
+            return True
+        if self.verifie_diagonalement_bas_haut(joueur):
             return True
         if self.verif_diagonal1(joueur):
             return True
-        if self.verif_diagonal2(joueur):
-            return True
         return False
         
+def jouer_partie():
+    g = Grille()
+    joueur = 1
+
+    while not g.est_pleine():
+        print(g)
+
+        colonnes_disponibles = [c for c in range(NB_COLONNES) if g.grille[0][c] == 0]
+        if not colonnes_disponibles:
+            break
+
+        col = choice(colonnes_disponibles)
+        g.jouer(col, joueur)
+
+        print(f"Joueur {joueur} joue colonne {col}")
+
+        if g.a_gagner(joueur):
+            print(g)
+            print(f"🎉 Le joueur {joueur} a gagné !")
+            return
+
+        joueur = 2 if joueur == 1 else 1
+
+    print(g)
+    print("🤝 Match nul !")
 
     
   
@@ -177,7 +203,7 @@ print(la_grille2.est_pleine())
 print(la_grille2)  
 
 
-
+jouer_partie()
 
 
 
